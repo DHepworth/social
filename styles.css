@@ -231,7 +231,8 @@ article ul li:not(:first-child) {
 	margin: 1.75rem 0 0 0;
 }
 
-article ul li:hover {
+article ul li:hover,
+article ul li:focus-within {
 	background: linear-gradient(to right, var(--orange-t4), var(--orange-t4));
 	border-color: var(--orange);
 	box-shadow: 0 0 2rem var(--orange-t25);
@@ -259,14 +260,18 @@ article ul li a {
 }
 
 article ul li a:hover strong,
-article ul li a:active strong {
+article ul li a:active strong,
+article ul li a:focus strong {
 	text-decoration: underline;
 }
 
 article ul li a:hover span,
-article ul li a:active span {
+article ul li a:active span,
+article ul li a:focus span {
 	color: white;
 }
+
+
 
 article ul li span {
 	color: #f3d0ba;
