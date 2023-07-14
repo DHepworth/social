@@ -51,8 +51,8 @@ body {
 }
 
 .background::before {
-	background-size: 250rem;
 	background: url('mountain.svg') no-repeat bottom center;
+	background-size: 250rem;
 	bottom: -2px;
 	content: '';
 	filter: blur(2px) drop-shadow(0 0 0.3rem rgba(14, 23, 34, 0.5));
