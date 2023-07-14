@@ -260,3 +260,10 @@ article ul li span {
 	color: #f3d0ba;
 	margin: 0 0 0 auto;
 }
+
+@media screen and (max-width: 500px) {
+	article ul li span {
+		display: none;
+		visibility: hidden;
+	}
+}
