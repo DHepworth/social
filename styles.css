@@ -1,5 +1,5 @@
 :root {
-	--noise: url("data:image/svg+xml,%3Csvg viewBox='0 0 1000 1000' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='9.97' numOctaves='6' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+	--noise: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='9.97' numOctaves='6' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 	--orange: rgb(255,229,195);
 	--orange-t10: rgba(255,229,195,0.1);
 	--orange-t25: rgba(255,229,195,0.25);
@@ -20,11 +20,11 @@ body {
 	animation: fade-in 3s ease-out;
 	background: transparent;
 	content: '';
+	height: 100%;
+	left: 0;
 	position: absolute;
 	top: 0;
-	left: 0;
 	width: 100%;
-	height: 100%;
 	z-index: 3;
 }
 
@@ -51,8 +51,8 @@ body {
 }
 
 .background::before {
-	background: url('mountain.svg') no-repeat bottom center;
 	background-size: 250rem;
+	background: url('mountain.svg') no-repeat bottom center;
 	bottom: -2px;
 	content: '';
 	filter: blur(2px) drop-shadow(0 0 0.3rem rgba(14, 23, 34, 0.5));
@@ -66,13 +66,13 @@ body {
 }
 
 .background::after {
+	-webkit-mask-image: var(--noise);
 	background: rgba(0,0,0,0.2);
 	content: '';
 	display: block;
 	height: 100%;
 	left: 0;
 	mask-image: var(--noise);
-	-webkit-mask-image: var(--noise);
 	position: absolute;
 	top: 0;
 	width: 100%;
@@ -170,13 +170,13 @@ article {
 	background: linear-gradient(to bottom, rgba(255, 229, 195, 0.1), rgba(0, 0, 0, 0.6) 42%);
 	border-bottom: 1px solid var(--orange-t25);
 	border-left: 1px solid var(--orange-t5);
+	border-radius: 1rem;
 	border-right: 1px solid var(--orange-t5);
 	border-top: 1px solid var(--orange);
-	border-radius: 1rem;
 	margin: 3rem 0 0 0;
+	max-width: 35rem;
 	padding: 2rem;
 	position: relative;
-	max-width: 35rem;
 	width: 100%;
 	z-index: 6;
 }
@@ -191,12 +191,12 @@ article {
 }
 
 article::after {
+	-webkit-mask-image: linear-gradient(to right, transparent, white 25%, white, white 75%, transparent);
 	background: linear-gradient(to bottom, transparent, var(--orange-t25), transparent);
 	content: '';
 	height: 1rem;
 	left: 0;
 	mask-image: linear-gradient(to right, transparent, white 25%, white, white 75%, transparent);
-	-webkit-mask-image: linear-gradient(to right, transparent, white 25%, white, white 75%, transparent);
 	position: absolute;
 	top: -0.5rem;
 	width: 100%;
@@ -215,8 +215,9 @@ article ul {
 
 article ul li {
 	background: linear-gradient(to right, var(--orange-t25), rgba(0,0,0,0.25));
-	border: 1px solid var(--orange-t5);
 	border-radius: 0.5rem;
+	border: 1px solid var(--orange-t5);
+	overflow: scroll;
 	padding: 0;
 	text-shadow: 0 0 0.25rem rgba(0,0,0,0.25);
 	transition: 0.25s;
