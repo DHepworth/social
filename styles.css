@@ -201,13 +201,13 @@ article {
 	}
 }
 
-@include screen and (max-width: 699.0px) {
+@media screen and (max-width: 699.0px) {
 	article {
 		padding: 1.5rem;
 	}
 }
 
-@include screen and (min-width: 700px) {
+@media screen and (min-width: 700px) {
 	article {
 		padding: 2rem;
 	}
@@ -269,13 +269,13 @@ article ul li a {
 	text-decoration: none;
 }
 
-@media only screen and (max-width: 699.9px) {
+@media screen and (max-width: 699.9px) {
 	article ul li a {
 		display: block;
 	}
 }
 
-@media only screen and (min-width: 700px) {
+@media screen and (min-width: 700px) {
 	article ul li a {
 		display: flex;
 		flex-flow: row nowrap;
