@@ -13,8 +13,20 @@ body {
 	font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, IBM Plex Sans, Avenir Next, Avenir, Segoe UI, Helvetica Neue, Helvetica, Liberation Sans, Cantarell, Ubuntu, Roboto, Noto, Arial, sans-serif;
 	font-size: 100%;
 	margin: 0;
-	padding: 4rem;
 }
+
+@include screen and (max-width: 699.9px) {
+	body {
+		padding: 1rem 3rem;
+	}
+}
+
+@include screen and (min-width: 700px) {
+	body {
+		padding: 4rem;
+	}
+}
+
 
 .reveal::before {
 	animation: fade-in 3s ease-out;
@@ -175,7 +187,6 @@ article {
 	border-top: 1px solid var(--orange);
 	margin: 3rem 0 0 0;
 	max-width: 35rem;
-	padding: 2rem;
 	position: relative;
 	width: 100%;
 	z-index: 6;
@@ -187,6 +198,18 @@ article {
 	}
 	100% {
 		opacity: 1;
+	}
+}
+
+@include screen and (max-width: 699.0px) {
+	article {
+		padding: 1.5rem;
+	}
+}
+
+@include screen and (min-width: 700px) {
+	article {
+		padding: 2rem;
 	}
 }
 
