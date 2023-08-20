@@ -173,7 +173,7 @@ h1 {
 		filter: blur(1px);
 	}
 	100% {
-		filter:blur(0);
+		filter: blur(0);
 	}
 }
 
