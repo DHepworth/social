@@ -5,6 +5,7 @@
 	--orange-t25: rgba(255,229,195,0.25);
 	--orange-t4: rgba(255,229,195,0.4);
 	--orange-t5: rgba(255,229,195,0.5);
+	--white-t25: rgba(255,255,255,0.25);
 }
 
 body {
@@ -82,10 +83,10 @@ body {
 
 .blur::after {
 	-webkit-mask-image: var(--noise);
-	background: rgba(0,0,0,0.2);
+	background: rgba(22,23,26,0.2);
 	content: '';
 	display: block;
-	height: 100%;
+	height: 105%;
 	left: 0;
 	mask-image: var(--noise);
 	position: absolute;
@@ -93,7 +94,6 @@ body {
 	width: 100%;
 	z-index: 3;
 }
-
 
 .background {
 	background: #3a495c linear-gradient(to bottom, #4b5a6c 0%,#596575 15%,#858384 49%,#a69387 68%,#c5a084 83%,#d0a37e 93%,#cc9f79 97%,#c29774 100%);
@@ -186,6 +186,14 @@ h1 {
 	text-shadow: 0 0 1.5rem var(--orange);
 	text-transform: uppercase;
 	transform: translateY(0);
+	transition: color 0.5s, text-shadow 0.5s, transform 1s;
+}
+
+h1:hover {
+	color: white;
+	text-shadow: 0 0 1rem white;
+	transform: scale(1.05);
+	transition: color 0.5s, text-shadow 0.25s, transform 0.25s;
 }
 
 @keyframes reveal {
