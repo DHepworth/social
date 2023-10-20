@@ -49,6 +49,52 @@ body {
 	}
 }
 
+.blur {
+	content: '';
+	display: block;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 3;
+}
+
+.blur::before {
+	-webkit-backdrop-filter: blur(0px);
+	backdrop-filter: blur(0px);
+	content: '';
+	display: block;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	transition: 1.5s;
+	z-index: 2;
+}
+
+.blur.active::before {
+	-webkit-backdrop-filter: blur(20px);
+	backdrop-filter: blur(20px);
+	transition: 0.5s;
+}
+
+.blur::after {
+	-webkit-mask-image: var(--noise);
+	background: rgba(0,0,0,0.2);
+	content: '';
+	display: block;
+	height: 100%;
+	left: 0;
+	mask-image: var(--noise);
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 3;
+}
+
+
 .background {
 	background: #3a495c linear-gradient(to bottom, #4b5a6c 0%,#596575 15%,#858384 49%,#a69387 68%,#c5a084 83%,#d0a37e 93%,#cc9f79 97%,#c29774 100%);
 	color: white;
@@ -74,20 +120,6 @@ body {
 	opacity: .85;
 	position: absolute;
 	width: 101%;
-	z-index: 1;
-}
-
-.background::after {
-	-webkit-mask-image: var(--noise);
-	background: rgba(0,0,0,0.2);
-	content: '';
-	display: block;
-	height: 100%;
-	left: 0;
-	mask-image: var(--noise);
-	position: absolute;
-	top: 0;
-	width: 100%;
 	z-index: 1;
 }
 
