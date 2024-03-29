@@ -30,7 +30,6 @@ body {
 	}
 }
 
-
 .reveal::before {
 	animation: fade-in 3s ease-out;
 	background: transparent;
